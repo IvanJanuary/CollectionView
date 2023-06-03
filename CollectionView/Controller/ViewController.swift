@@ -36,7 +36,11 @@ class ViewController: UIViewController {
         blankMenu5.name = "Strawberries"
         blankMenu5.imageName = "strawberry"
         
-        return [blankMenu, blankMenu1, blankMenu2, blankMenu3, blankMenu4, blankMenu5]
+        var blankMenu6 = Menu()
+        blankMenu6.name = "Strawberries"
+        blankMenu6.imageName = "strawberry"
+        
+        return [blankMenu, blankMenu1, blankMenu2, blankMenu3, blankMenu4, blankMenu5, blankMenu6]
     }()
     
     override func viewDidLoad() {
@@ -76,6 +80,10 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let menu = itemMenuArray[indexPath.row]
         self.performSegue(withIdentifier: "fruitVC", sender: menu)
+        
+        
+        
+
         
 //        let storyboard = UIStoryboard(name: "Main", bundle: nil) // Замените "Main" на имя вашей сториборд
 //            if let detailViewController = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController {
